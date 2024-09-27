@@ -75,6 +75,13 @@ print(dict)
 #Note: get methods returns None while normal accessing by key produces error if  key is not present
 #       an error in code exec doesn't allow further code exec!
 
+#SETS IN PYTHON
+
+#Set is a collection of the unordered items. Each element in the set must be unique and immutable
+#tuple can be stored in a set, but not a dictionary and list since they are mutable
+
+collection = {1,2,3,4}
+
 
 
 
