@@ -88,7 +88,7 @@ conv(2000)
     else:
         print(n,"is odd")"""
 
-odd_even()  #function call
+# odd_even()  #function call
 
 #RECURSION
 # When a function calls itself repeatedly
@@ -101,3 +101,37 @@ def show(n):
     show(n-1)   #function called in itself i.e recursion    
 
 show(5)     #recursive function call
+
+#Finding factorial using recursion
+
+def fact(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*fact(n-1)
+
+print("Factorial of 5 is : ",fact(5))
+# print("Factorial of 5 is : ",fact(300))
+print("Factorial of 5 is : ",fact(10))
+
+# Q. Write a recursive function to calculate sum of first n natural numbers
+
+def rsum(n):
+    if n==0:    #base condition
+        return 0
+    else:
+        return n+rsum(n-1)
+
+print("Running sum of 3: ",rsum(3))
+print("Running sum of 5: ",rsum(5))
+
+#Q. Write a recursive function to print all elements in a list
+def print_list(lst,idx=0):
+    if idx == len(lst):     #base condition
+        return
+    else:
+        print(lst[idx],end=" ")
+        print_list(lst,idx+1)   #recursion
+
+mylist = ["Start",56,34,22,11,876,44,32,4,66,78,343,"End"]
+print_list(mylist)
