@@ -81,11 +81,23 @@ conv(84)
 conv(2000)
 
 #write a function that takes an input number and prints if its odd or even
-def odd_even():
+"""def odd_even():
     n=int(input("Enter number: "))
     if n%2==0:
         print(n,"is even")
     else:
-        print(n,"is odd")
+        print(n,"is odd")"""
 
 odd_even()  #function call
+
+#RECURSION
+# When a function calls itself repeatedly
+
+#Print numbers from n to 1
+def show(n):
+    if n==0:
+        return
+    print(n)
+    show(n-1)   #function called in itself i.e recursion    
+
+show(5)     #recursive function call
