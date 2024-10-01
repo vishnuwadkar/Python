@@ -138,3 +138,17 @@ def print_list(lst,idx=0):
 
 mylist = ["Start",56,34,22,11,876,44,32,4,66,78,343,"End"]
 print_list(mylist)
+print()
+
+#Q. Write a python function to print n stars pyramid 
+n=4
+def print_pyramid(n):
+    if n==0:
+        return
+    for i in range(n):
+        print("*",end=" ")
+    print()
+    print_pyramid(n-1)
+
+print_pyramid(5)
+print_pyramid(10)
