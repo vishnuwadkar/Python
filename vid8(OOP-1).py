@@ -110,7 +110,7 @@ class Account:
     def get_account_details(self,acc_no):
         print(f"Account Number: {self.acc_no}, Balance: {self.balance}")
 
-#transactions
+#transactions----
 Vishnu = Account(1210)
 Vishnu.credit(4000)
 Vishnu.debit(200)
