@@ -33,7 +33,7 @@ print(average(23,43,45)) #function call
 #the print function
 # print(value,separator,end) -> an in build function
 # print() function is used to print the value in the console
-print("Hello","Lentgh",end=" ",sep="$",)  #by default end is \n which is next line but by passing end arg we change it
+print("Hello","Length",end=" ",sep="$",)  #by default end is \n which is next line but by passing end arg we change it
 print("Hello")  #thus the two hello's will be printed on the same line
 # f string is used to pass a variable in a string
 name = "Vishnu"
