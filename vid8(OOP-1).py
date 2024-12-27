@@ -4,6 +4,8 @@
 #CLASS AND OBJECT
 '''Class is the blueprint(template) for an object while an object is the 
     instance of the class'''
+    
+#instance attribute takes preference over class attribute
 
 #creating a class
 class Student:
@@ -25,6 +27,7 @@ print(Lexus.color)
 print(Lexus.type)'''
 
 #CONSTRUCTOR - a special function defined as __init__() func, which is always executed when the class is initiated
+#a.k.a dunder method
 
 class Bacche:
     def __init__(self):     #constructor syntax
@@ -84,6 +87,7 @@ print(s1.avg())
 #STATIC METHOD
 #when we don't have to use the self parameter
 #works at class level
+#when we dont need an object
 class myStud:
     @staticmethod   #decorator for static method
     def hello():    #no self para reqd
