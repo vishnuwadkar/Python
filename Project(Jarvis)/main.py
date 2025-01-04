@@ -12,6 +12,7 @@ import openmeteo_requests
 import requests_cache
 import pandas as pd
 from retry_requests import retry
+from datetime import datetime, timedelta
 
 recognizer = sr.Recognizer()    #recognizer object to recognize speech
 engine = pyttsx3.init()           #text to speech object to convert text to speech
@@ -140,6 +141,8 @@ def processCommand(c):  #function for processing the command
         webbrowser.open("https://gmail.com")
     elif "open linkedin" in c.lower():
         webbrowser.open("https://linkedin.com")
+    elif "open spotify" in c.lower():
+        webbrowser.open("https://open.spotify.com/search/stan?flow_ctx=c8ffbd14-9850-4669-9015-0971400394c7%3A1736036348#login")
     #for playing songs
     elif c.lower().startswith("play"):
         song = c.lower().split(" ")[1]
@@ -154,6 +157,10 @@ def processCommand(c):  #function for processing the command
                 speak(article.get("title"))
     elif "weather" in c.lower():
         weather()
+    elif "time" in c.lower():
+        speak("The current time is " + str(datetime.datetime.now().strftime("%H:%M:%S")))
+    elif "date" in c.lower():
+        speak("The current date is " + str(datetime.datetime.now().strftime("%d/%m")))
     else:
         speak("Sorry I didn't understand that!")
 
@@ -172,7 +179,7 @@ if __name__ == "__main__":
                 print("Listening...")
                 audio = r.listen(source, timeout=2, phrase_time_limit=1)
             command = r.recognize_google(audio)
-            if "google" in command.lower():
+            if "jarvis" in command.lower():
                 speak("How may I help you sir?")
                 #listen for the command
                 with sr.Microphone() as source:
